@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/About.css";
+import "../styles/about.css";
 import { FaCode, FaGraduationCap, FaBriefcase, FaRocket } from "react-icons/fa";
 import Aquarium from "../assets/aquarium.jpg";
 function About() {
