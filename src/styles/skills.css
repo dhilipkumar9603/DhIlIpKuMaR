@@ -1,0 +1,162 @@
+.skills-container {
+    background-color: #0f0f0f;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top:80px;
+    
+}
+
+.skills-container h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills-container p {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.category-btn {
+    background-color: #222;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-btn:hover {
+  background-color:     #333;
+}
+
+.category-btn.active {
+  background-color: #6c63ff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom:30px;
+  transition: all 0.5s ease-in-out !important;
+}
+
+.skill-card {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.skill-card h3 {
+  margin: 0;
+}
+
+.skill-card p {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #bbb;
+}
+.card{
+  background-color:  #0f0f0f;
+  transition: all 0.5s ease-in-out !important;
+}
+.card-grid {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.card:hover .card-header {
+  color: #0f0f0f;
+}
+.card:hover .card-title {
+  color: #fce9e9;
+}
+.skill-card:has(.how-text){
+  height:293px;
+}
+@media (max-width: 768px) {
+  /* Container spacing and alignment */
+  .skills-container {
+    padding: 1.5rem 1rem;
+    margin-top: 60px;
+  }
+
+  .skills-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .skills-container p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Category buttons stack better on small screens */
+  .category-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .category-btn {
+    padding: 10px 16px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* Skills grid goes to single-column */
+  .skills-grid {
+  }
+
+  .skill-card {
+    padding: 0.85rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1rem;
+  }
+
+  .skill-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Card layout adjustments */
+  .card-grid {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 30px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  /* Hover effect override for mobile (optional) */
+  .card:hover {
+    transform: none;
+  }
+
+  /* Adjust .skill-card height when .how-text is present */
+  .skill-card:has(.how-text) {
+    height: auto;
+  }
+}
