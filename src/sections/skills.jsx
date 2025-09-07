@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/Skills.css";
+import "../styles/skills.css";
 
 const skillsData = [
     { name: "React.js", years: 2, category: "React.js", how: "I have been working with React.js for 5 years, building dynamic and responsive user interfaces, most of my projects were made with React.js." },
