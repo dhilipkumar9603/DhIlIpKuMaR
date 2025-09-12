@@ -106,21 +106,25 @@ body::-webkit-scrollbar{
   background-color: #0f0f0f;
   color: white;
   padding: 10px 10px;
-  border: .5px solid white;
+  border: 1px solid rgb(114, 53, 53);
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.5s ease;
   display: flex;
   align-items: center;
   gap: 10px;
+  background:
+    linear-gradient(rgb(0, 0, 0), rgb(52, 48, 48)) padding-box, 
+    linear-gradient(90deg, #3857a4, #d7135b) border-box;
 }
 
 @media screen and (max-width: 768px) {
-  .header nav{
-    display: none;
+  .header nav button{
+    transform: scale(0.8);
   }
+
   .mobile-hide{
-    display: none;
+    display: none !important;
   }
   
   .social-icons {

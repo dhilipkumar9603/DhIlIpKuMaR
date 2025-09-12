@@ -38,36 +38,39 @@ function Main_frame() {
             <header className="header">
                 <div className="header-container header-inner">
                     <div className="logo">dHiLiP's Portfolio</div>
+
                     <nav style={{ padding: "10px", background: "#0f0f0f" }}>
-                    {nav_headers.map((tab) =>
-                        isMobile ? (
-                        <button
-                            key={tab}
-                            className={`Tab-button ${activeTab === tab ? "active" : ""}`}
-                            onClick={() => {
-                            setActiveTab(tab);
-                            scrollToSection(tab);
-                            }}
-                            style={{ color: "white", marginRight: "20px" }}
-                        >
-                            {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                        </button>
-                        ) : (
-                        <Link
-                            key={tab}
-                            to={`/app/${tab}`}
-                            style={{ color: "white", marginRight: "20px" }}
-                        >
+                        <span className="mobile-hide">
+                        {nav_headers.map((tab) =>
+                            isMobile ? (
                             <button
-                            className={`Tab-button ${activeTab === tab ? "active" : ""}`}
-                            onClick={() => setActiveTab(tab)}
+                                key={tab}
+                                className={`Tab-button ${activeTab === tab ? "active" : ""}`}
+                                onClick={() => {
+                                setActiveTab(tab);
+                                scrollToSection(tab);
+                                }}
+                                style={{ color: "white", marginRight: "20px" }}
                             >
-                            {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                                {tab.charAt(0).toUpperCase() + tab.slice(1)}
                             </button>
-                        </Link>
-                        
-                        )
-                    )}
+                            ) : (
+                            <Link
+                                key={tab}
+                                to={`/app/${tab}`}
+                                style={{ color: "white", marginRight: "20px" }}
+                            >
+                                <button
+                                className={`Tab-button ${activeTab === tab ? "active" : ""}`}
+                                onClick={() => setActiveTab(tab)}
+                                >
+                                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                                </button>
+                            </Link>
+                            
+                            )
+                        )}
+                    </span>
                     <button className="resume-btn" onClick={handleOpenPDF}>
                         Resume
                         <FaDownload style={{ marginRight: "8px" }} />
@@ -98,7 +101,7 @@ function Main_frame() {
 
 
             <footer>
-                ©2025 Tech Portfolio. All rights reserved.
+                ©2025 DhIlIp'S Portfolio. All rights reserved.
             </footer>
         </div>
     );

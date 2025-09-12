@@ -2,14 +2,14 @@ import { useState } from "react";
 import "../styles/skills.css";
 
 const skillsData = [
-    { name: "React.js", years: 2, category: "React.js", how: "I have been working with React.js for 5 years, building dynamic and responsive user interfaces, most of my projects were made with React.js." },
-    { name: "JavaScript", years: 3, category: "JavaScript", how: "I have been working with JavaScript for 6 years, mastering both ES5 and ES6 features, and using it extensively in web development." },
-    { name: "HTML5", years: 3, category: "HTML5", how: "I have been working with HTML5 for 6 years, creating semantic and accessible web pages, ensuring cross-browser compatibility." },
-    { name: "CSS3", years: 3, category: "CSS3", how: "I have been working with CSS3 for 6 years, implementing responsive designs and animations to enhance user experience." },
-    { name: "Node.js", years: 1, category: "Node.js", how: "I have been working with Node.js for 4 years, building scalable server-side applications and RESTful APIs." },
-    { name: "Express.js", years: 1, category: "Express.js", how: "I have been working with Express.js for 4 years, creating robust web applications and APIs with a focus on performance and scalability." },
-    { name: "MongoDB", years: 1, category: "MongoDB", how: "I have been working with MongoDB for 3 years, managing NoSQL databases and implementing data models for various applications." },
-    { name: "Git", years: 3, category: "Git", how: "I have been working with Git for 6 years, using it for version control in all my projects, collaborating with teams effectively." },
+    { name: "React.js", years: 2, category: "React.js", how: "I have been working with React.js for 2 years, building dynamic and responsive user interfaces, most of my projects were made with React.js." },
+    { name: "JavaScript", years: 3, category: "JavaScript", how: "I have been working with JavaScript for 3 years, mastering both ES5 and ES6 features, and using it extensively in web development." },
+    { name: "HTML5", years: 3, category: "HTML5", how: "I have been working with HTML5 for 3 years, creating semantic and accessible web pages, ensuring cross-browser compatibility." },
+    { name: "CSS3", years: 3, category: "CSS3", how: "I have been working with CSS3 for 3 years, implementing responsive designs and animations to enhance user experience." },
+    { name: "Node.js", years: 1, category: "Node.js", how: "I have been working with Node.js for 1 years, building scalable server-side applications and RESTful APIs." },
+    { name: "Express.js", years: 1, category: "Express.js", how: "I have been working with Express.js for 1 years, creating robust web applications and APIs with a focus on performance and scalability." },
+    { name: "MongoDB", years: 1, category: "MongoDB", how: "I have been working with MongoDB for 1 years, managing NoSQL databases and implementing data models for various applications." },
+    { name: "Git", years: 3, category: "Git", how: "I have been working with Git for 3 years, using it for version control in all my projects, collaborating with teams effectively." },
     { name: "Django", years: 1, category: "Django", how: "I learned Django so that I can integrate Machine learning in WebDevelopment and it has been very useful, I successfully gained 1 year of experience in Django." },
     { name: "Sql-Server", years: 1, category: "Sql-Server", how: "I worked with SQL Server so that I can be familiar with real-time environments by assigning separate users and allocating data properly." }
 ];
@@ -50,8 +50,8 @@ function Skills() {
                     </button>
                 ))}
             </div>
-
-            <div className="skills-grid">
+            
+            <div className="skills-grid mobile-hide">
                 {filteredSkills.map(skill => (
                     <div
                         key={skill.name}

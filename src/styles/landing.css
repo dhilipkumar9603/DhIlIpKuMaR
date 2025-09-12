@@ -58,3 +58,22 @@ body, html {
 .cta-button:hover {
     background-color: #6236ff;
 }
+@media screen and (max-width: 768px) {
+    .overlay {
+        padding: 40px;
+    }
+
+    .overlay h1 {
+        font-size: 1.8rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+}
